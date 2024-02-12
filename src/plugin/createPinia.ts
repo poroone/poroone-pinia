@@ -1,3 +1,4 @@
+// 初始化pinia
 import type {App} from "vue"
 
 function install(app:App) {
