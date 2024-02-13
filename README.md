@@ -24,3 +24,28 @@ pinia dispose
 - state {"counter":{count:1},"options":{xxx}}  //state 中只会存储 ref reactive 不存computed
 - install
 - _s  Map => {'counter'=>proxy({counter,dubleCount,increment}),"options":proxy({})} 
+
+任何一个页面SFC单文件组件使用pinia的时候去访问同一个对象 
+
+### api
+  reset 清空
+  dispose 停止
+  subscribe 侦听state变化
+### createPinia
+  install vueuse默认执行必须写
+  createPinia 抛出给vue用的pinia实例
+### defienStore 
+  createApi 一些附加的api
+  defienStore 用于创建pinia 参数是id 和option | setup函数
+  createSetupPinia 
+  compileSetup  用来处理setup函数模式
+  createOptionsPinia
+  compileOptions 用来处理options模式
+### format  设计了一些功能
+  isFunction 判断是不是一个function
+  isComputed 判断是不是一个computed 
+### type 一些类型
+  __pinia__ 定义了一个symbol防止重复
+  Pinia 定义了pinia的类型 install state scope store 
+  SetupFunction  setup函数模式
+  options   options模式 state actions getters
